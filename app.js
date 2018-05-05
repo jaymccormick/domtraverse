@@ -18,12 +18,16 @@ removeButton.addEventListener('click', () => {
   ul.removeChild(lastLI);
 });
 
+/**
+// works, but blows away the whole page when any button other than an li button
+// is clicked
 divList.addEventListener('click', (ev) => {
   // event is an object w/ attributes and methods
   // use event.target to get element where event started
-  if (ev.target.tagName == 'LI'){
-    let currentLI = ev.target;
+  if (ev.target.tagName == 'BUTTON'){
+    let currentLI = ev.target.parentNode;
     let ul = currentLI.parentNode;
     ul.removeChild(currentLI);
   }
 });
+*/

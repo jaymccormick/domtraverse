@@ -10,6 +10,9 @@ button {
 button + button {
   background-color: #777;
 }
+li > button {
+  margin: 10px;
+}
 input {
   height: 30px;
 }
