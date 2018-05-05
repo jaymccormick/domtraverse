@@ -1,0 +1,15 @@
+body {
+  font-family: "Avenir", Sans-Serif;
+}
+button {
+  background-color: #377aef;
+  color: white;
+  border: none;
+  height: 30px;
+}
+button + button {
+  background-color: #777;
+}
+input {
+  height: 30px;
+}
