@@ -18,20 +18,12 @@ removeButton.addEventListener('click', () => {
   ul.removeChild(lastLI);
 });
 
-divList.addEventListener('mouseover', (ev) => {
+divList.addEventListener('click', (ev) => {
   // event is an object w/ attributes and methods
   // use event.target to get element where event started
   if (ev.target.tagName == 'LI'){
     let currentLI = ev.target;
-    currentLI.textContent = currentLI.textContent.toUpperCase();
-  }
-});
-
-divList.addEventListener('mouseout', (ev) => {
-  // event is an object w/ attributes and methods
-  // use event.target to get element where event started
-  if (ev.target.tagName == 'LI'){
-    let currentLI = ev.target;
-    currentLI.textContent = currentLI.textContent.toLowerCase();
+    let ul = currentLI.parentNode;
+    ul.removeChild(currentLI);
   }
 });
