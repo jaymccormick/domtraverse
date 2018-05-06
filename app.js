@@ -35,7 +35,10 @@ listUL.addEventListener('click', (ev) => {
       let currentLI = ev.target.parentNode;
       let prevLI = currentLI.previousElementSibling;
       let ul = currentLI.parentNode;
-      ul.insertBefore(currentLI, prevLI);
+      // check if there is a previous LI so don't add to end of list
+      if (prevLI){
+        ul.insertBefore(currentLI, prevLI);
+      }
     }
   }
 });
