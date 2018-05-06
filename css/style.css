@@ -6,12 +6,13 @@ button {
   color: white;
   border: none;
   height: 30px;
+  border-radius: 3px;
 }
 button + button {
   background-color: #777;
 }
 li > button {
-  margin: 10px;
+  margin: 10px 0px 10px 5px;
 }
 input {
   height: 30px;
