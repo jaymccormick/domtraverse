@@ -27,8 +27,15 @@ listUL.addEventListener('click', (ev) => {
   // event is an object w/ attributes and methods
   // use event.target to get element where event started
   if (ev.target.tagName == 'BUTTON'){
-    let currentLI = ev.target.parentNode;
-    let ul = currentLI.parentNode;
-    ul.removeChild(currentLI);
+    if (ev.target.className == 'remove'){
+      let currentLI = ev.target.parentNode;
+      let ul = currentLI.parentNode;
+      ul.removeChild(currentLI);
+    } else if (ev.target.className == 'up'){
+      let currentLI = ev.target.parentNode;
+      let prevLI = currentLI.previousElementSibling;
+      let ul = currentLI.parentNode;
+      ul.insertBefore(currentLI, prevLI);
+    }
   }
 });
