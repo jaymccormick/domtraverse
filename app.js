@@ -5,6 +5,11 @@ const divList = document.querySelector('.list');
 const listUL = divList.querySelector('ul');
 const liList = document.getElementsByTagName('li');
 const lis = listUL.children;
+/**
+// getting first and last child elements of ul, respectively
+const firstLI = listUL.firstElementChild;
+const lastLI = listUL.lastElementChild;
+*/
 
 // function to add buttons to li's present on load or added after
 function attachLIButtons(li){
