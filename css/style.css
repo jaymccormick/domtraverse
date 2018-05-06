@@ -9,7 +9,7 @@ button {
   border-radius: 3px;
 }
 button + button {
-  background-color: #444;
+  background-color: #744aef;
 }
 button:last-of-type {
   background-color: #888;
