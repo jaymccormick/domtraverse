@@ -32,13 +32,21 @@ listUL.addEventListener('click', (ev) => {
       let ul = currentLI.parentNode;
       ul.removeChild(currentLI);
     } else if (ev.target.className == 'up'){
-      let currentLI = ev.target.parentNode;
-      let prevLI = currentLI.previousElementSibling;
-      let ul = currentLI.parentNode;
-      // check if there is a previous LI so don't add to end of list
-      if (prevLI){
-        ul.insertBefore(currentLI, prevLI);
-      }
+        let currentLI = ev.target.parentNode;
+        let prevLI = currentLI.previousElementSibling;
+        let ul = currentLI.parentNode;
+        // check if there is a previous LI so don't add to end of list
+        if (prevLI){
+          ul.insertBefore(currentLI, prevLI);
+        }
+    } else if (ev.target.className == 'down'){
+        let currentLI = ev.target.parentNode;
+        let nextLI = currentLI.nextElementSibling;
+        let ul = currentLI.parentNode;
+        // check if there is a previous LI so don't add to end of list
+        if (nextLI){
+          ul.insertBefore(nextLI, currentLI);
+        }
     }
   }
 });
